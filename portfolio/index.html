@@ -449,10 +449,10 @@ footer { flex-direction: column; gap: 0.5rem; text-align: center; }
 <nav>
   <div class="nav-logo">Lena <span>Fang</span></div>
   <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#contact" class="nav-cta">Contact</a></li>
+    <li><a href="#about" onclick="gtag('event','button_click',{'button_name':'nav_about'})">About</a></li>
+    <li><a href="#projects" onclick="gtag('event','button_click',{'button_name':'nav_projects'})">Projects</a></li>
+    <li><a href="#experience" onclick="gtag('event','button_click',{'button_name':'nav_experience'})">Experience</a></li>
+    <li><a href="#contact" class="nav-cta" onclick="gtag('event','button_click',{'button_name':'nav_contact_cta'})">Contact</a></li>
   </ul>
 </nav>
 
@@ -472,11 +472,11 @@ footer { flex-direction: column; gap: 0.5rem; text-align: center; }
           Senior analytics leader with 9+ years building measurement infrastructure and driving organizational decisions — across Nasdaq-listed fintech, Fortune 500 retail, and Tencent's super-app ecosystem.
         </p>
         <div class="hero-actions">
-          <a href="https://www.linkedin.com/in/lenafangg/" target="_blank" class="btn btn-dark">
+          <a href="https://www.linkedin.com/in/lenafangg/" target="_blank" class="btn btn-dark" onclick="gtag('event','button_click',{'button_name':'hero_linkedin'})">
             <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zm1.78 13.02H3.56V9h3.56v11.45z"/></svg>
             LinkedIn
           </a>
-          <a href="mailto:fangpuyi@gmail.com" class="btn btn-ghost">fangpuyi@gmail.com</a>
+          <a href="mailto:fangpuyi@gmail.com" class="btn btn-ghost" onclick="gtag('event','button_click',{'button_name':'hero_email'})">fangpuyi@gmail.com</a>
         </div>
       </div>
     </div>
@@ -819,8 +819,8 @@ footer { flex-direction: column; gap: 0.5rem; text-align: center; }
     <h2>Let's build<br>something <em>rigorous</em></h2>
     <p class="contact-sub">Always happy to connect — whether it's about measurement, experimentation, analytics strategy, or just a good conversation.</p>
     <div class="contact-btns">
-      <a href="https://www.linkedin.com/in/lenafangg/" target="_blank" class="btn btn-white">View LinkedIn</a>
-      <a href="mailto:fangpuyi@gmail.com" class="btn btn-outline-w">fangpuyi@gmail.com</a>
+      <a href="https://www.linkedin.com/in/lenafangg/" target="_blank" class="btn btn-white" onclick="gtag('event','button_click',{'button_name':'contact_linkedin'})">View LinkedIn</a>
+      <a href="mailto:fangpuyi@gmail.com" class="btn btn-outline-w" onclick="gtag('event','button_click',{'button_name':'contact_email'})">fangpuyi@gmail.com</a>
     </div>
   </div>
 </section>
