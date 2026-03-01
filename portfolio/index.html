@@ -848,6 +848,19 @@ footer { flex-direction: column; gap: 0.5rem; text-align: center; }
   const ro = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); }), {threshold:0.08});
   document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
 
+  // Scroll depth tracking
+  const scrollMilestones = [25, 50, 75, 90];
+  const reached = new Set();
+  window.addEventListener('scroll', () => {
+    const pct = Math.round((window.scrollY + window.innerHeight) / document.body.scrollHeight * 100);
+    scrollMilestones.forEach(m => {
+      if (pct >= m && !reached.has(m)) {
+        reached.add(m);
+        gtag('event', 'scroll_depth', { depth: m + '%' });
+      }
+    });
+  }, { passive: true });
+
   // Close mobile nav when a link is clicked
   document.querySelectorAll('.nav-links a').forEach(a => {
     a.addEventListener('click', () => document.querySelector('nav').classList.remove('nav-open'));
