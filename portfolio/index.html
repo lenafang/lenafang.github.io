@@ -370,6 +370,15 @@
     }
     .proj-impact-text strong { color: #059669; }
 
+    /* ── EDUCATION ── */
+    #education { padding: 0 0 100px; }
+    .edu-grid { display: flex; flex-direction: column; gap: 1.25rem; }
+    .edu-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem 2rem; display: grid; grid-template-columns: 1fr auto; gap: 0.25rem 1rem; align-items: start; }
+    .edu-school { font-size: 1rem; font-weight: 700; color: var(--ink); }
+    .edu-degree { font-size: 0.85rem; color: var(--mid); margin-top: 0.2rem; }
+    .edu-note { font-size: 0.75rem; color: var(--mid); margin-top: 0.3rem; font-style: italic; }
+    .edu-year { font-size: 0.78rem; color: var(--mid); white-space: nowrap; padding-top: 0.2rem; }
+
     /* ── CONTACT ── */
     #contact {
       background: var(--ink); padding: 100px 0;
@@ -773,6 +782,31 @@ footer { flex-direction: column; gap: 0.5rem; text-align: center; }
         </div>
       </div>
 
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="wrap">
+    <span class="label reveal">Education</span>
+    <h2 class="sh reveal">Academic <em>background</em></h2>
+    <div class="edu-grid">
+      <div class="edu-card reveal">
+        <div>
+          <div class="edu-school">Loyola University Chicago</div>
+          <div class="edu-degree">M.S. Finance</div>
+        </div>
+        <div class="edu-year">Chicago, IL</div>
+      </div>
+      <div class="edu-card reveal" style="transition-delay:.08s">
+        <div>
+          <div class="edu-school">Zhongnan University of Economics and Law <span style="font-weight:400;color:var(--mid);">(211 Project University, China)</span></div>
+          <div class="edu-degree">B.S. Finance</div>
+          <div class="edu-note">Joint Program with University of West Georgia</div>
+        </div>
+        <div class="edu-year">Wuhan, China</div>
+      </div>
     </div>
   </div>
 </section>
